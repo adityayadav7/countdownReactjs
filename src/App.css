@@ -27,6 +27,72 @@
 .App-link {
   color: #61dafb;
 }
+.base-timer {
+  display: inline-table;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+.button-start{
+  background-color: #202b33;
+ border: 1px solid transparent;
+ border-radius: 4px;
+ padding: 10px 20px;
+ color: #fff;
+ font-size: 16px;
+ margin: 0 5px;
+ cursor: pointer;
+}
+.button-start:hover{
+  background-color: blue;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +102,44 @@
     transform: rotate(360deg);
   }
 }
+.input-container{
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 20px;
+  width: auto;
+  background-color: #161b1f;
+  box-shadow: 0 3px 6px #0c0c0c;
+}
+.time-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: -moz-fit-content;
+  margin-bottom: 20px;
+}
+.time-container label{
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+input{
+  margin-top: 6px;
+  min-width: 15em;
+  height: 37px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-family: "Open Sans",sans-serif;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: all .25s ease-in-out;
+}
+@media (max-width: 580px){
+.container {
+    width: -webkit-fill-available;
+}
+}
+@media (max-width: 770px){
+  .container {
+      width: -webkit-fill-available;
+  }
+  }
